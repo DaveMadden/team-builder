@@ -15,12 +15,12 @@ function App() {
   const [formValues, setFormValues] = useState(initialFormValues);
 
   const updateForm = (inputName, inputValue) => {
-    console.log(`updateForm with ${inputName}, ${inputValue}`);
+    // console.log(`updateForm with ${inputName}, ${inputValue}`);
     setFormValues({ ...formValues, [inputName]: inputValue});
   }
 
   const submitForm = () => {
-    console.log(`submitForm with ${formValues.name}`);
+    // console.log(`submitForm with ${formValues.name}`);
 
     const newGuy = {
       // id: uuid(),
@@ -28,7 +28,7 @@ function App() {
       email: formValues.email.trim(),
       role: formValues.role
     }
-    console.log(`newguy: ${newGuy.name} can be emailed at ${newGuy.email} for info about being a ${newGuy.role}`)
+    // console.log(`newguy: ${newGuy.name} can be emailed at ${newGuy.email} for info about being a ${newGuy.role}`)
     
     if(!newGuy.name || !newGuy.email || !newGuy.role){
       window.alert("gotta fill out all the stuff, bro");
