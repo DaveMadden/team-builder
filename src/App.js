@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 import './App.css';
-import Form from './Form'
-import Guy from './Guy'
+import Form from './Form';
+import Guy from './Guy';
 
 const initialFormValues = {
   name: "",
@@ -23,7 +23,7 @@ function App() {
     console.log(`submitForm with ${formValues.name}`);
 
     const newGuy = {
-      id: uuid(),
+      // id: uuid(),
       name: formValues.name.trim(),
       email: formValues.email.trim(),
       role: formValues.role
@@ -34,11 +34,9 @@ function App() {
       window.alert("gotta fill out all the stuff, bro");
       return;
     }
-
-    //trying to do this without fake axios
-    setTeam(team.concat(newGuy));
+    // setTeam([...team, newGuy])
+    setTeam([...team, {...newGuy, id: uuid()}]);
     setFormValues(initialFormValues);
-
   }
 
   return (

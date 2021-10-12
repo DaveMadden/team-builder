@@ -22,7 +22,7 @@ export default function Form(props) {
                     <input
                         type="text"
                         name="name"
-                        value={values.username}
+                        value={values.name}
                         onChange={onChange}
                         placeholder="put yo name bro"
                     />
