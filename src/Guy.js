@@ -10,6 +10,7 @@ export default function Guy(props){
             <h3>{details.name}</h3>
             <p>{details.email}</p>
             <p>{details.role}</p>
+            <button>edit</button>
         </div>
     )
 }

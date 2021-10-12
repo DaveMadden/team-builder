@@ -5,19 +5,17 @@ export default function Form(props) {
 
     const onChange = evt => {
         const { name, value } = evt.target;
-        // console.log(`onChange, update with: ${name} ${value}`);
         update(name, value);
     }
 
     const onSubmit = evt => {
         evt.preventDefault();
-        // console.log(`onSubmit: ${evt}`);
         submit();
     }
 
     return (
         <form onSubmit={onSubmit}>
-            <div>
+            <div className="form container">
                 <label>Name
                     <input
                         type="text"
@@ -27,7 +25,6 @@ export default function Form(props) {
                         placeholder="put yo name bro"
                     />
                 </label>
-                <br/>
                 <label>Email
                     <input
                         type="email"
@@ -37,7 +34,6 @@ export default function Form(props) {
                         placeholder="put yo email bro"
                     />
                 </label>
-                <br/>
                 <label>Role
                     <select value={values.role} name="role" onChange={onChange}>
                         <option value="">-- select role bro --</option>
